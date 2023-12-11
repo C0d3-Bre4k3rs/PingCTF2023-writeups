@@ -6,13 +6,16 @@
 
 int main(void)
 {
-  const teaminfo info = {
+  teaminfo info = {
       .team   = {"5h4d0w", "N0am!ster", "L3d", "ProfessorZak", "talsim"},
       .points = 2193,
       .place = 18
   };
 
-  const char *site_url = "https://ctf.knping.pl/";
+  char *CTFURL = "https://ctf.knping.pl";
+  char *CTFtimeURL = "https://ctftime.org/event/1987";
+  float CTFtimePoints = 24.29f;
+  short int duration_h = (1 << 5) + (1 << 4);
 
   return THAT_WAS_FUN;
 }
