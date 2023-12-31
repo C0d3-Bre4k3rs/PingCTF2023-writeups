@@ -114,13 +114,13 @@ reminder: `help2[i] = q[i] & p[i-1]` => `q[i]&p[i-1] = 0`.
 Code:
 ```python
 for i, bit in enumerate(help2):
-    #skiping bits that are 1, and i=0 because p[i-1] will be p[-1].
-	if bit == '1' and i == 0:
+	#skiping i=0 because p[i-1] will be p[-1].
+	if i == 0:
 		continue
 	
-	if q[i] == '1':
+	if bit == '0' and q[i] == '1':
 		p[i-1] = '0'
-	elif p[i-1] == '1':
+	elif bit == '0' and p[i-1] == '1':
 		q[i]   = '0'
 ```
 
