@@ -237,7 +237,7 @@ but actually it still takes too long, so we will need to optimize part 4.
 #### Part 5.1 - Adding the check for q&(p-1) and for p&q
 Every time we add a new bit to p or q, we need to check `q[i]&(p[i-1]) == help2[i]` and if it is not correct delete it. same for `q[i]&p[i] == help1[i]`
 ```python
-q_cur = int(q[index], 2)
+	q_cur = int(q[index], 2)
 	p_cur = int(p[index], 2)
 
 	if q_cur & p_cur != int(help1[index], 2):
